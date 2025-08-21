@@ -10,6 +10,8 @@ DS_Dynamics2s.m: same as DS_Dynamics1s.m but uses an initial condition that is c
 
 DS_Dynamics2t.m: same as DS_Dynamics1t.m but uses an initial condition that is close to the selected eigenstate. This code is used for the stability analysis.
 
+Dirac.m is a helper function that is called by all of the DS_Dynamics*.m files.
+
 The "Networks" subfolder contains the codes used to generate the Poisson (random) networks and the stochastic block models (SBM).
 
 The "figure#" subfolders contain the codes used to plot the respective figures in the paper. They may also contain a shorter version of the DS_Dynamics*.m codes with only the lines required for the generation of the data used in the respective figures.
