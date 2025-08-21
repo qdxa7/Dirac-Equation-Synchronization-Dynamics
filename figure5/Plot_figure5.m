@@ -120,7 +120,7 @@ Elist = [2 4];
 ax3 = nexttile(t,3);
 hold(ax3, 'on');
 for i = 1:2
-    load(sprintf('DS_Dyn1s_m1_E%d_lam1_0_RG_k12_N1000_NPsi0',Elist(i)),'E','Sigma','sel2','seve','Psi_dot_fore','Psi_fore')
+    load(sprintf('DS_Dyn2s_m1_E%d_lam1_0_RG_k12_N1000_NPsi0',Elist(i)),'E','Sigma','sel2','seve','Psi_dot_fore','Psi_fore')
 
     pPsi_dot_fore = seve' * Psi_dot_fore;
     pPsi_dot_fore_full = pPsi_dot_fore;
