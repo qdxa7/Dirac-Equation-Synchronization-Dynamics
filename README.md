@@ -25,7 +25,7 @@ DOI: https://doi.org/10.1103/v65b-3jx7
 
 If you use this data please cite:
 
-[2] Antonín Škoch, Barbora Rehák Bučkov ́a, Jan Mareš, Jaroslav Tintěra, Pavel Sanda, Lucia Jajcay, Jiří Horáček, Filip Španiel, and Jaroslav Hlinka. Human
+[2] Antonín Škoch, Barbora Rehák Bučková, Jan Mareš, Jaroslav Tintěra, Pavel Sanda, Lucia Jajcay, Jiří Horáček, Filip Španiel, and Jaroslav Hlinka. Human
 brain structural connectivity matrices–ready for modelling. Scientific Data, 9(1):486, 2022.
 
 (c) A.A.A. Zaid (a.a.a.zaid@qmul.ac.uk) Ginestra Bianconi (g.bianconi@qmul.ac.uk)
