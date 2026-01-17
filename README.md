@@ -1,20 +1,18 @@
-# Dirac-Equation-Synchronization-Dynamics (DESD)
+# Dirac-Equation Synchronization Dynamics (DESD)
 
-This repo contains the codes relevant to the paper titled "Designing topological cluster synchronization patterns with the Dirac operator".
+This repo contains the MATLAB codes relevant to the paper titled "Designing topological cluster synchronization patterns with the Dirac operator" [1]:
 
-DS_Dynamics1s.m: runs DESD and adiabatically increasing the value of the coupling strength sigma. Outputs the dynamical variables as a function of sigma. Uses random initial conditions.
+* Dynamics.m: the main code required to run the DESD on a simple network. The inputs, outputs, and parameters are detailed in the comments at the top of the code.
 
-DS_Dynamics1t.m: runs DESD for a fixed coupling strength sigma. Outputs the dynamical variables as a function of time. Uses random initial conditions.
+* DESD.m: the auxiliary function called by Dynamics.m.
 
-DS_Dynamics2s.m: same as DS_Dynamics1s.m but uses an initial condition that is close to the selected eigenstate. This code is used for the stability analysis.
-
-DS_Dynamics2t.m: same as DS_Dynamics1t.m but uses an initial condition that is close to the selected eigenstate. This code is used for the stability analysis.
-
-Dirac.m is a helper function that is called by all of the DS_Dynamics*.m files.
-
-The "Networks" subfolder contains the codes used to generate the Poisson (random) networks and the stochastic block models (SBM).
-
-The code that generate the networks outputs a .mat file (starting with "RG" for a random network and "SBM" for an SBM) that contains the network data. The DS_Dynamics*.m codes take this .mat file as input and they output another .mat file (starting with "DS_Dyn") that contains the dynamics data. The figure plotting codes may take either .mat files as inputs depending on the plot. This is clarified by looking at the file name passed to the "load()" command in each code.
+* Fig2:
+  - Plot_Fig2.m: uses the data in DESD_m1_E1_fig2.mat and DESD_m1_E2_fig2.mat to reproduce Fig. 2 of the paper showing the topological cluster-synchronizations induced by the DESD on the human structural connectome.
+  - Data: contains the raw structural connectome data in SCmatrices88healthy.mat [2] and the preprocessing code Data_extraction.m
+ 
+* Fig9:
+  - Plot_Fig9.m: uses the data in DESD_m1_E1_fig9.mat to reproduce Fig. 9 of the paper showing topological cluster-synchronization induced by the DESD on an instance of the stochastic block model (SBM).
+  - SBM: contains the code NetGen.m used to generate the SBM and the auxiliary function block_model.m
 
 The codes can be redistributed and/or modified under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -24,5 +22,10 @@ If you use these codes please cite
 
 [1] A.A.A. Zaid and G. Bianconi, "Designing topological cluster synchronization patterns with the Dirac operator". Physical Review E (2026).
 DOI: https://doi.org/10.1103/v65b-3jx7
+
+If you use this data please cite:
+
+[2] Antonín Škoch, Barbora Rehák Bučkov ́a, Jan Mareš, Jaroslav Tintěra, Pavel Sanda, Lucia Jajcay, Jiří Horáček, Filip Španiel, and Jaroslav Hlinka. Human
+brain structural connectivity matrices–ready for modelling. Scientific Data, 9(1):486, 2022.
 
 (c) A.A.A. Zaid (a.a.a.zaid@qmul.ac.uk) Ginestra Bianconi (g.bianconi@qmul.ac.uk)
