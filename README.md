@@ -6,13 +6,15 @@ This repo contains the MATLAB codes relevant to the paper titled "Designing topo
 
 * DESD.m: the auxiliary function called by Dynamics.m that implements the vector field associated with DESD.
 
-* DESD on Structural Connectome:
-  - Plot_SC.m: uses the data in DESD_m1_E1_SC.mat and DESD_m1_E2_SC.mat to reproduce Fig. 2 of the paper showing the topological cluster-synchronizations induced by the DESD on the human structural connectome.
-  - Data: contains the raw structural connectome data in SCmatrices88healthy.mat [2] and the preprocessing code Data_extraction.m
- 
+* Spectra.m: plots the spectral cumulative density of the Hamiltonian operator defined for the user's choice of the network and mass constant. This can be used to visually determine the existence and number of isolated eigenstates that can induce topological cluster synchronization.
+
 * DESD on SBM:
-  - Plot_SBM.m: uses the data in DESD_m1_E1_SBM.mat to reproduce Fig. 9 of the paper showing topological cluster-synchronization induced by the DESD on an instance of the stochastic block model (SBM).
+  - Plot_SBM.m: plots the data in DESD_m1_E1_SBM.mat that shows the topological cluster-synchronization induced by the DESD on an instance of the stochastic block model (SBM).
   - SBM: contains the code NetGen.m used to generate the SBM and the auxiliary function block_model.m
+
+* DESD on Structural Connectome:
+  - Plot_SC.m: plots the data in DESD_m1_E1_SC.mat and DESD_m1_E2_SC.mat that shows the topological cluster-synchronization induced by the DESD on the human structural connectome.
+  - Data: contains the raw structural connectome data in SCmatrices88healthy.mat [2] and the preprocessing code Data_extraction.m
 
 The codes can be redistributed and/or modified under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 

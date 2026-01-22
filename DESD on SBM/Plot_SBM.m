@@ -8,7 +8,7 @@ colormap(cmap);
 ax1 = nexttile(t,1);
 hold(ax1, 'on');
 
-load('DESD_m1_E1_fig9.mat')
+load('DESD_m1_E1_SBM.mat')
 
 theta_dot = Psi_dot_at_Tmax(1:N);
 phi_dot = Psi_dot_at_Tmax(N+1:L);

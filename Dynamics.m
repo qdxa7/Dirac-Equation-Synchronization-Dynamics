@@ -5,7 +5,7 @@
 
 % Inputs:
 % A - NxN adjacency matrix of the network
-% DESD.m - function file defining the DESD dynamical system
+% DESD.m - the auxiliary function that implements the vector field associated with DESD.
 
 % Outputs:
 % Psi_vs_time - phases of nodes and links as a function of time
@@ -13,7 +13,14 @@
 
 % Parameters (can be modified by the user):
 % m - mass constant
-% sel - index of the eigenstate to be selected
+% sel - index of the eigenstate to be selected. Note that sel=1 selects the harmonic
+%       eigenstate(s) with E=|m| and sel=1+n selects the nth isolated eigenstate with
+%       E>|m| if the spectrum contains any. These isolated eigenstates can induce
+%       topological cluster-synchronization in the DESD model. To know how many isolated
+%       eigenstates exist in the spectrum of the Hamiltonian operator defined for your 
+%       network of choice, run the Spectra.m code provided in this repository. Note also
+%       that the non-negative energies are selected by default. To select the corresponding
+%       negative ones, simply negate the variable E with a minus sign infront of 'energy(sel)'.
 % Omega0, tau0 - mean and precision of the distribution of node intrinsic frequencies
 % Omega1, tau1 - mean and precision of the distribution of link intrinsic frequencies
 % cOmega(sel) - component of Omega in the direction of the selected eigenstate
@@ -53,9 +60,11 @@ H = D+(m*gamma);
 energy = real(diag(energy));
 [energy,idx] = sort(energy,'ascend'); %sort energies from lowest to highest
 estate = estate(:,idx); %sort eigenstates compatibly with energies
+[idx,~]=find(energy>=0);
+energy = energy(idx); %save only non-negative energies (negative energies are equal to non-negative energies with opposite sign)
 
 %%Select desired eigenstate by setting 'sel' to the index of its associated energy (E): 
-sel = 3;
+sel = 2;
 E = energy(sel);
 
 %%Define the final operator to be used in the DESD model (Deqn):

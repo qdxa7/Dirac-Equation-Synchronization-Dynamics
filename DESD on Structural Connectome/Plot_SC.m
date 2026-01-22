@@ -2,7 +2,7 @@ figure('Position', [70, 70, 1600, 900])
 t = tiledlayout(2,4, 'Padding','compact', 'TileSpacing','compact');
 
 %%Panel (a)
-load('DESD_m1_E1_fig2.mat')
+load('DESD_m1_E1_SC.mat')
 
 ax1 = nexttile(t,1);
 p=plot(ax1,G);
@@ -63,7 +63,7 @@ text(-0.40, 1, '(d)', 'Units', 'normalized', 'HorizontalAlignment', 'center', 'F
 box on
 
 %%Panel (e)
-load('DESD_m1_E2_fig2.mat')
+load('DESD_m1_E2_SC.mat')
 
 ax5 = nexttile(t,5);
 p=plot(ax5,G);
